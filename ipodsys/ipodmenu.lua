@@ -1,22 +1,24 @@
 print("welcome to the ipod 1.0!")
 local option = 1
 local selecting = true
-local file = fs.open("settings.txt", "r")
-local Username = file.readLine()
-local ID = file.readLine()
-local theme = file.readLine()
+
+local sets = fs.open("settings.txt", "r")
+sets.readLine()
+sets.readLine()
+local theme = sets.readLine()
 if theme == "Dark" then
-    term.setBackgroundColor("f")
+    term.setBackgroundColor(colors.black)
+    term.setTextColor(colors.white)
 elseif theme == "Medium" then
-    term.setBackgroundColor(8)
+    term.setBackgroundColor(colors.lightGray)
+    term.setTextColor(colors.gray)
 elseif theme == "Light" then
-    term.setBackgroundColor(1)
-    term.setTextColor("f")
+    term.setBackgroundColor(colors.white)
+    term.setTextColor(colors.black)
 end
-local modem = peripheral.find("speaker")
-    if moden ==
+
 local function ListenForKS()
-     repeat
+    repeat
         local event, key, is_held = os.pullEvent(key)
         if key == 264 and selecting then
             option = option + 1
