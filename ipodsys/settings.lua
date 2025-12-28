@@ -1,3 +1,4 @@
+--THIS CODE IS NOT LABELED FOR INDIVIDUAL USE.
 print("welcome to settings")
 local file = fs.open("settings.txt","r")
 local username = file.readLine()
