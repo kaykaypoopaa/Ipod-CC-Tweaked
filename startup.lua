@@ -1,3 +1,16 @@
 -- THIS CODE IS NOT LABELED FOR INDIVIDUAL USE.
-shell.run("cd ipodsys")
-shell.run("ipodmenu.lua")
+local function RunIpod()
+  shell.run("cd ipodsys")
+  shell.run("ipodmenu.lua")
+end
+
+local function ListenForTerm()
+  while true do
+    local event = os.pullEventRaw()
+    if event == "terminate" then
+      os.reboot
+    end
+  end
+end
+
+parallel.waitForAny(RunIpod, ListenForTerm)
