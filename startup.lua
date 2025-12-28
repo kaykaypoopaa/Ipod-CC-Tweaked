@@ -8,7 +8,7 @@ local function ListenForTerm()
   while true do
     local event = os.pullEventRaw()
     if event == "terminate" then
-      os.reboot
+      os.reboot()
     end
   end
 end
