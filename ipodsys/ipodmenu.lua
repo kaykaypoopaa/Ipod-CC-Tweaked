@@ -1,3 +1,4 @@
+--THIS CODE IS NOT LABELED FOR INDIVIDUAL USE.
 print("welcome to the ipod 1.0!")
 local option = 1
 local selecting = true
