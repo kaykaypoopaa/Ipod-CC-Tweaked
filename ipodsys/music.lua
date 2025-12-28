@@ -1,3 +1,4 @@
+--THIS CODE IS NOT LABELED FOR INDIVIDUAL USE.
 local api_base_url = "https://ipod-2to6magyna-uc.a.run.app/"
 local version = "2.1"
 
