@@ -2,21 +2,6 @@ print("this is the app menu")
 local option = 1
 local selecting = true
 
-local sets = fs.open("settings.txt", "r")
-sets.readLine()
-sets.readLine()
-local theme = sets.readLine()
-if theme == "Dark" then
-    term.setBackgroundColor(colors.black)
-    term.setTextColor(colors.white)
-elseif theme == "Medium" then
-    term.setBackgroundColor(colors.lightGray)
-    term.setTextColor(colors.gray)
-elseif theme == "Light" then
-    term.setBackgroundColor(colors.white)
-    term.setTextColor(colors.black)
-end
-
 local function ListenForKS()
     repeat
         local event, key, is_held = os.pullEvent(key)
