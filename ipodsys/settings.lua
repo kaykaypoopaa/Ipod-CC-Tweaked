@@ -19,7 +19,10 @@ elseif settingtochange == "1" then
     change1.write(user .. "\n" .. id .. "\n" .. theme)
     change1.close()
 elseif settingtochange == "2" then
-    print("Sorry, this can only be changed by the Ipod's manufacturer.")
+    local newid = read()
+    local change2 = fs.open("settings.txt","w")
+    change2.write(username .. "\n" .. newid .. "\n" .. theme)
+    change2.close()
 elseif settingtochange == "3" then
     local teme = read()
     local change3 = fs.open("settings.txt","w")
