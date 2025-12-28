@@ -13,7 +13,7 @@ shell.run("wget  https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/
 print("Installing Snake")
 shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/ipodsys/snake.lua snake.lua")
 print("Installing Calculator")
-shell.run("wget https://github.com/kaykaypoopaa/Ipod-CC-Tweaked/blob/main/ipodsys/calc.lua calc")
+shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/ipodsys/calc.lua calc")
 print("CDing to rom to create settings.txt")
 shell.run("cd ..")
 print("creating and writing to settings")
