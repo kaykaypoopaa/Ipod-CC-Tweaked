@@ -1,4 +1,4 @@
---this was done by glitchgod but i let him commit it
+--THIS CODE IS NOT LABELED FOR INDIVIDUAL USE.
 print("this is the app menu")
 local option = 1
 local selecting = true
