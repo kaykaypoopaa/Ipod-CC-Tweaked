@@ -89,8 +89,8 @@ local function EnterApplication()
                 print("App Store")
                 shell.run("appstore.lua")
             elseif option == 4 then
-                print("Menu")
-                shell.run("ipodmenu.lua")
+                print("Snake")
+                shell.run("snake.lua")
             end
             os.reboot()
         end
