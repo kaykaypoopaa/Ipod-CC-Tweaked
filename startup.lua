@@ -13,10 +13,10 @@ local function ListenForTerm()
   end
 end
 
-local localversion = "1.0"
-local file = shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/version.txt version.txt")
-file.readLine()
-if file >= localversion then
+local localversion = 1.0
+shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/version.txt version.txt")
+local file = fs.open("version.txt", "r")
+if file ~= localversion then
   print("Do you want to update? (y/n)")
   local updatereq = read()
 elseif updatereq == y then
