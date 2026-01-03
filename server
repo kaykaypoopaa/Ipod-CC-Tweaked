@@ -115,4 +115,60 @@ local function handleRequest(path)
         -- Persistent counter using a file
         local count = 0
         if fs.exists("visitor_count") then
-            l
+            local file = fs.open("visitor_count", "r")
+            count = tonumber(file.readAll()) or 0
+            file.close()
+        end
+        
+        count = count + 1
+        
+        local file = fs.open("visitor_count", "w")
+        file.write(tostring(count))
+        file.close()
+        
+        return string.format([[
+<!DOCTYPE html>
+<html>
+<head><title>Visitor Counter</title></head>
+<body style="font-family: Arial; max-width: 800px; margin: 50px auto;">
+    <h1>👥 Visitor Counter</h1>
+    <p style="font-size: 48px; color: #00ff00;">Visitor #%d</p>
+    <p><a href="/counter">Refresh</a> | <a href="/">Home</a></p>
+</body>
+</html>
+        ]], count)
+    
+    else
+        return [[
+<!DOCTYPE html>
+<html>
+<head><title>404 Not Found</title></head>
+<body style="font-family: Arial; max-width: 800px; margin: 50px auto;">
+    <h1>404 - Page Not Found</h1>
+    <p>This page doesn't exist on the CC server.</p>
+    <p><a href="/">← Go Home</a></p>
+</body>
+</html>
+        ]]
+    end
+end
+
+-- Main loop
+while true do
+    local message = ws.receive()
+    
+    if message then
+        print("Request: " .. message)
+        
+        -- Generate response
+        local response = handleRequest(message)
+        
+        -- Send back to bridge
+        ws.send(response)
+    else
+        print("Connection closed")
+        break
+    end
+end
+
+ws.close()
