@@ -4048,8 +4048,6 @@ local function handleRequest(path)
         <!--  Site Wide Html Markup -->
     </body>
 </html>
-        ]], id, label, turtle and turtle.getFuelLevel() or "N/A (not a turtle)")
-    
     elseif path == "/counter" then
         -- Persistent counter using a file
         local count = 0
