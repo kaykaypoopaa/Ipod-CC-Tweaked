@@ -1,0 +1,36 @@
+local port = 8080
+local visitors = 0
+
+local server = http.listen(port)
+print("Server running at http://127.0.0.1:" .. port)
+
+while true do
+    local request = server.accept()
+    
+    if request then
+        local line = request.readLine()
+        if line and line:match("^GET") then
+            visitors = visitors + 1
+            
+            while request.readLine() do end
+            
+            local html = string.format([[
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Visitor Counter</h1>
+    <p>You are visitor #%d!</p>
+    <p><a href="/">Refresh</a></p>
+</body>
+</html>
+            ]], visitors)
+            
+            request.write("HTTP/1.1 200 OK\r\n")
+            request.write("Content-Type: text/html\r\n\r\n")
+            request.write(html)
+            request.close()
+        end
+    end
+    
+    sleep(0.05)
+end
