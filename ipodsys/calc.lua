@@ -24,3 +24,4 @@ elseif op == "/" then
 print(a / b)
 sleep(3)
 end
+read()
