@@ -21,7 +21,7 @@ if ver ~= localversion then
   print("Do you want to update? (y/n)")
   local updatereq = read()
 elseif updatereq == y then
-  shell.run(updater.lua)
+  shell.run("updater.lua")
 elseif updatereq == n then
 end
 parallel.waitForAny(RunIpod, ListenForTerm)
