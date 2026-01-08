@@ -22,6 +22,10 @@ elseif op == "*" then
 print(a * b)
 elseif op == "/" then
 print(a / b)
-sleep(3)
+elseif op == "%" then
+print(a % b)
+elseif op == "^" then
+print(a ^ b)
+sleep(0.5)
 end
 read()
