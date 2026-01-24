@@ -29,3 +29,5 @@ print(a ^ b)
 sleep(0.5)
 end
 read()
+term.clear()
+term.setCursorPos(1, 1)
