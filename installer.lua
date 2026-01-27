@@ -1,3 +1,7 @@
+if not pocket then
+    print("Please use a pocket computer.")
+    return
+end
 print("Making Ipodsys Dir")
 fs.makeDir("ipodsys")
 print("Making Ipodusr Dir")
