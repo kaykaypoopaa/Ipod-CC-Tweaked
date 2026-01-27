@@ -24,7 +24,7 @@ elseif settingtochange == "2" then
     change2.write(username .. "\n" .. newid .. "\n" .. theme)
     change2.close()
 elseif settingtochange == "3" then
-    local teme = read()
+    local teme = read() --u fucking misspelled it dumbass -GlitchGod42
     local change3 = fs.open("settings.txt","w")
     change3.write(username .. "\n" .. id .. "\n" .. teme)
     change3.close()
