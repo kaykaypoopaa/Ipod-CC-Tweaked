@@ -7,4 +7,8 @@ We (GlitchGod42 and kaykaypoopaa aka lawnman) will be updating this os to fix **
 Please send your bugs and suggestions in the issues tab and make sure to add the correct tags
 SPREADSHEET https://docs.google.com/spreadsheets/d/1FNJ1mCwG5vrfnA92h8pWsEy_HKMsEa4HzDnL5w0c_gg/edit?gid=326635325#gid=326635325
 
-Anyways i hope you enjoy ipod os
+_**--CUSTOM APPS--**_
+
+To make custom apps you will need to make a pull request to the appstore folder
+
+Your app will be tested to make sure that it will work well. **Make sure that your apps work on pocket computer!!!** 
