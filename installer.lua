@@ -1,11 +1,16 @@
 if not pocket then
     print("Please use a pocket computer.")
     return
+elseif not advanced then
+    print("Please use a ADVANCED pocket computer.")
+    return
 end
-print("Making Ipodsys Dir")
+print("Making System Dir")
 fs.makeDir("ipodsys")
-print("Making Ipodusr Dir")
+print("Making User Dir")
 fs.makeDir("ipodusr")
+print("Making Apps Dir")
+fs.makeDir("ipodapps")
 print("Installing Updater")
 shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/updater.lua updater.lua")
 print("CDing into ipodsys to install")
