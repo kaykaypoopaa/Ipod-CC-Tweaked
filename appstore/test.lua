@@ -1,47 +1,49 @@
 local owner = "kaykaypoopaa"
 local repo = "Ipod-CC-Tweaked"
 local folder = "appstore"
+local API_URL = "https://api.github.com"..owner.."/"..repo.."/contents/"..folder
 
-local function searchGitHub(query)
-    local url = "https://api.github.com"..owner.."/"..repo.."/contents/"..folder
-    -- GitHub REQUIRES this header table or it returns an error
-    local response = http.get(url, {["User-Agent"] = "CC-Tweaked"})
-    
-    if not response then return {"Error: Connection Failed"} end
-    
-    local data = textutils.unserializeJSON(response.readAll())
-    response.close()
-    
-    local matches = {}
-    for _, item in ipairs(data) do
-        -- The "Search" part: check if item name contains your query
-        if item.name:lower():find(query:lower()) then
-            table.insert(matches, item.name)
-        end
-    end
-    return matches
+term.clear()
+term.setCursorPos(1,1)
+print("Connecting to GitHub...")
+
+-- Headers are MANDATORY for GitHub API
+local headers = {
+    ["User-Agent"] = "CC-Tweaked-Search",
+    ["Accept"] = "application/vnd.github.v3+json"
+}
+
+-- Use assert to catch the specific 'Connection Failed' reason
+local ok, response = pcall(function() 
+    return assert(http.get(API_URL, headers)) 
+end)
+
+if not ok then
+    print("Error Details: " .. tostring(response))
+    print("\nPossible fix: Add 'api.github.com' to your [[http.rules]] in the config file.")
+    return
 end
 
--- Simple Search UI
+local data = textutils.unserializeJSON(response.readAll())
+response.close()
+
+-- YouTube-style suggestion display
+print("Search: ")
 local input = ""
 while true do
-    term.clear()
-    term.setCursorPos(1,1)
-    print("GitHub App Search: " .. input)
-    print(string.rep("-", 20))
+    local _, char = os.pullEvent("char")
+    input = input .. char
+    term.clearLine()
+    term.write("> " .. input)
     
-    if #input > 0 then
-        local results = searchGitHub(input)
-        for i, name in ipairs(results) do
-            print(i .. ". " .. name)
-            if i >= 5 then break end
+    -- Filter and show results
+    local count = 0
+    for _, item in ipairs(data) do
+        if item.name:lower():find(input:lower()) then
+            print("\n  - " .. item.name)
+            count = count + 1
         end
+        if count >= 3 then break end
     end
-    
-    local event, char = os.pullEvent()
-    if event == "char" then
-        input = input .. char
-    elseif event == "key" and char == keys.backspace then
-        input = input:sub(1, -2)
-    end
+    term.setCursorPos(3 + #input, 2)
 end
