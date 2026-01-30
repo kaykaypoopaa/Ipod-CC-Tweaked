@@ -42,5 +42,19 @@ function uilib.drawAll()
     end
 end
 
+--4. Clicking Stuff
+function uilib.clickEvent()
+    while true do
+        local event, side, x, y = os.pullEvent()
+    
+        if event == "monitor_touch" or event == "mouse_click" then
+            for _, b in ipairs(buttonList) do
+                if x >= b.xMin and x <= b.xMax and y >= b.yMin and y <= b.yMax then
+                    b.action()
+                end
+            end
+        end
+    end
+end
 -- CRITICAL: This allows 'local uilib = require("uilib")' to work
 return uilib
