@@ -42,8 +42,5 @@ function uilib.drawAll()
     end
 end
 
---4. Clicking stuff...
-local function uilib.clickAction
-
 -- CRITICAL: This allows 'local uilib = require("uilib")' to work
 return uilib
