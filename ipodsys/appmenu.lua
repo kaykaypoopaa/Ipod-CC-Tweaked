@@ -1,22 +1,7 @@
 --THIS CODE IS NOT LABELED FOR INDIVIDUAL USE.
-print("welcome to the ipod 1.0!")
+print("this is the app menu")
 local option = 1
 local selecting = true
-
-local sets = fs.open("settings.txt", "r")
-sets.readLine()
-sets.readLine()
-local theme = sets.readLine()
-if theme == "Dark" then
-    term.setBackgroundColor(colors.black)
-    term.setTextColor(colors.white)
-elseif theme == "Medium" then
-    term.setBackgroundColor(colors.lightGray)
-    term.setTextColor(colors.gray)
-elseif theme == "Light" then
-    term.setBackgroundColor(colors.white)
-    term.setTextColor(colors.black)
-end
 
 local function ListenForKS()
     repeat
@@ -42,42 +27,42 @@ local function RenderSel()
         if option == 1 and selecting then -- highlight option 1
             term.clear()
             term.setCursorPos(1,1)
-            print("Welcome to ipod os 1.0")
+            print("Welcome to the app selector!")
             print("Selection:")
-            term.blit("Music", "00000", "77777")
+            term.blit("Calculator", "0000000000", "7777777777")
             print()
-            print("Apps")
-            print("Paint")
-            print("Settings")
+            print("Browser")
+            print("App Store")
+            print("Snake")
         elseif option == 2 and selecting then -- highlight option 2
             term.clear()
             term.setCursorPos(1,1)
-            print("Welcome to ipod os 1.0")
+            print("Welcome to the app selector!")
             print("Selection:")
-            print("Music")
-            term.blit("Apps", "0000", "7777")
+            print("Calculator")
+            term.blit("Browser", "0000000", "7777777")
             print()
-            print("Paint")
-            print("Settings")
+            print("App Store")
+            print("Snake")
         elseif option == 3 and selecting then
             term.clear()
             term.setCursorPos(1,1)
-            print("Welcome to ipod os 1.0")
+            print("Welcome to the app selector!")
             print("Selection:")
-            print("Music")
-            print("Apps")
-            term.blit("Paint", "00000", "77777")
+            print("Calculator")
+            print("Browser")
+            term.blit("App Store", "000000000", "777777777")
             print()
-            print("Settings")
+            print("Snake")
         elseif option == 4 and selecting then
             term.clear()
             term.setCursorPos(1,1)
-            print("Welcome to ipod os 1.0")
+            print("Welcome to the app selector!")
             print("Selection:")
-            print("Music")
-            print("Apps")
-            print("Paint")
-            term.blit("Settings", "00000000", "77777777")
+            print("Calculator")
+            print("Browser")
+            print("App Store")
+            term.blit("Snake", "00000", "77777")
         end
         sleep(0.2)
     until selecting == false
@@ -95,17 +80,17 @@ local function EnterApplication()
             term.write("Opening ")
             sleep(0.5)
             if option == 1 then
-                print("Music Program")
-                shell.run("music.lua")
+                print("Calculator")
+                shell.run("calc.lua")
             elseif option == 2 then
-                print("Application Menu")
-                shell.run("appmenu.lua")
+                print("Notes")
+                shell.run("notes.lua")
             elseif option == 3 then
-                print("Paint")
-                shell.run("Paint.lua")
+                print("Browser")
+                shell.run("ccbrowser.lua")
             elseif option == 4 then
-                print("Settings App")
-                shell.run("settings.lua")
+                print("Snake")
+                shell.run("snake.lua")
             end
             os.reboot()
         end

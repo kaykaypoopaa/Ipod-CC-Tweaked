@@ -1,3 +1,4 @@
+--THIS CODE IS NOT LABELED FOR INDIVIDUAL USE.
 print("welcome to settings")
 local file = fs.open("settings.txt","r")
 local username = file.readLine()
@@ -18,9 +19,12 @@ elseif settingtochange == "1" then
     change1.write(user .. "\n" .. id .. "\n" .. theme)
     change1.close()
 elseif settingtochange == "2" then
-    print("Sorry, this can only be changed by the Ipod's manufacturer.")
+    local newid = read()
+    local change2 = fs.open("settings.txt","w")
+    change2.write(username .. "\n" .. newid .. "\n" .. theme)
+    change2.close()
 elseif settingtochange == "3" then
-    local teme = read()
+    local teme = read() --u fucking misspelled it dumbass -GlitchGod42
     local change3 = fs.open("settings.txt","w")
     change3.write(username .. "\n" .. id .. "\n" .. teme)
     change3.close()
