@@ -1,6 +1,0 @@
-local mon = peripheral.find("monitor")
-local uilib = require("uilib")
-uilib.setup(mon)
-uilib.addButton(2,2,7,3,"hello",colors.blue, function() print("fah") end)
-uilib.drawAll()
-uilib.clickEvent()
