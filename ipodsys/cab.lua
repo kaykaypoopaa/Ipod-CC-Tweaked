@@ -1,4 +1,15 @@
 --0. Variables
-local appstore = "https://github.com/kaykaypoopaa/Ipod-CC-Tweaked/tree/0c595dd04fa0747167b0fe23cd7bf5cde13603d2/appstore"
---1. Fetching stuff
-wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/appstore/applist.txt ipodapps/applist.txt
+local path = "applist.txt"
+--1. Listing stuff
+if fs.exists(path) then
+    local file = fs.open(path, "r")
+    local contents = file.readAll()
+    file.close()
+    print(contents)
+else
+    local file = fs.open(path, "w")
+    file.write("No apps listed.")
+    file.close()
+end
+--2. App Launching
+

