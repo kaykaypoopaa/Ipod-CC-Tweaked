@@ -83,11 +83,11 @@ local function EnterApplication()
                 print("Calculator")
                 shell.run("calc.lua")
             elseif option == 2 then
-                print("Notes")
-                shell.run("notes.lua")
-            elseif option == 3 then
                 print("Custom App Browser")
                 shell.run("cab.lua")
+            elseif option == 3 then
+                print("App Store")
+                shell.run("appstore.lua")
             elseif option == 4 then
                 print("Snake")
                 shell.run("snake.lua")
