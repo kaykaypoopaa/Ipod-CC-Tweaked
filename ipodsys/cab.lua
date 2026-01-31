@@ -1,7 +1,8 @@
 --0. Variables
-local sc = require("/ipod/Ipod-CC-Tweaked/apis/speedycoding")
+local sc = require("/apis/speedycoding")
 local path = "applist.txt"
 --1. Listing Stuff
+sc.reset()
 print("Which app do you want to launch?")
 shell.run("dir ../ipodapps")
 --2. App Launching
