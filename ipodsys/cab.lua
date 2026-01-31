@@ -1,15 +1,13 @@
 --0. Variables
+local sc = require("/ipod/Ipod-CC-Tweaked/apis/speedycoding")
 local path = "applist.txt"
---1. Listing stuff
-if fs.exists(path) then
-    local file = fs.open(path, "r")
-    local contents = file.readAll()
-    file.close()
-    print(contents)
-else
-    local file = fs.open(path, "w")
-    file.write("No apps listed.")
-    file.close()
-end
+--1. Listing Stuff
+print("Which app do you want to launch?")
+shell.run("dir ../ipodapps")
 --2. App Launching
-
+local launchapp = read()
+sleep(0.3)
+sc.reset()
+print("Launching "..launchapp)
+sleep(0.5)
+shell.run("../ipodapps/"..launchapp)
