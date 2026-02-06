@@ -20,19 +20,7 @@ _**--API DOCUMENTATION--**_
 Uilib is a library that helps you make ui's that are simple while being easy to make.
 
 **EXAMPLE SCRIPT:**
-
-`local mon = peripheral.find("monitor") or term
-local uilib = require("uilib") \n
-local buttons = {}
---now we setup and do the buttons
-uilib.setup(mon)
-uilib.addButton(2,2,7,3,"test",colors.blue, function() print("hi") end) --makes a button at 2, 2 with the width of 7 and height of 3 with a name of test thats blue and prints hi when clicked
-uilib.drawAll()
-buttons = uilib.buttonList
-while true do
-  uilib.clickEvent(buttons) -- this is so the clicking can work
-end`
-
+its in apis/uilibexample.lua because github sucks
 
 
 
