@@ -19,21 +19,27 @@ _**--API DOCUMENTATION--**_
 
 Uilib is a library that helps you make ui's that are simple while being easy to make.
 **EXAMPLE SCRIPT:**
+
 its in apis/uilibexample.lua because github sucks
 
 uilib.setup()
+
 This will setup the library. **MAKE SURE YOU MAKE A VARIABLE FOR MONITORS OR TERMINALS**
 
 uilib.addButton()
+
 This makes a button. yea. Also you need to have specific data with this formatting. (x, y, width, length, label, color, action)
 
 uilib.drawAll()
+
 It draws all, what did you expect?
 
 uilib.buttonList
+
 Makes uilib.clickEvent work
 
 uilib.clickEvent()
+
 (put it into a loop for it to work) It makes clicking work yk.
 
 
