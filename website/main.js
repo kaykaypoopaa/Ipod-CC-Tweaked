@@ -26,7 +26,7 @@ let highlightedExample = example
     // NEW: Catch anything starting with UILib. and highlight it yellow
     .replace(/(UILib\.\w+)/g, '<span class="ln">$1</span>') 
     // Expanded keywords to catch Lua and CC-specific terms
-    .replace(/\b(function|end|local|print|peripheral|find|colors|then|if|else|return)\b/g, '<span class="ln">$1</span>');
+    .replace(/\b(function|end|local|print|peripheral|find|colors|then|do|if|while|else|return)\b/g, '<span class="ln">$1</span>');
     let paramList = params.map((p, i) => `${i+1}. ${p}`).join('<br>');
 
     const html = `
@@ -35,7 +35,7 @@ let highlightedExample = example
             <span class="ln">${name}</span>(<span class="ld">${syntax}</span>)
             <span class="white-text"><br>${paramList}</span>
             <span><br>Example usage:<br></span>
-            <code>${highlightedExample}</code>
+            <code class="white-space">${highlightedExample}</code>
         </div>
     `;
     
@@ -66,4 +66,22 @@ addDoc(
         "action: function; callback"
     ],
     'UILib.addButton(10, 10, 100, 20, "Click Me", colors.blue, function() print("Clicked!") end)'
+);
+
+addDoc(
+    "UILib.drawAll",
+    "this function draws all buttons in the buttonList variable.",
+    "",
+    [],
+    'local monitor = peripheral.find("monitor") or term\nUILib.setup(monitor)\nUILib.addButton(10, 10, 100, 20, "Click Me", colors.blue, function() print("Clicked!") end)\nUILib.drawAll()'
+);
+
+addDoc(
+    "UILib.clickEvent",
+    "this function adds a click event listener to every button in the buttons argument.",
+    "buttons",
+    [
+        "buttons: table; button list"
+    ],
+    'local monitor = peripheral.find("monitor") or term\nUILib.setup(monitor)\nUILib.addButton(10, 10, 100, 20, "Click Me", colors.blue, function() print("Clicked!") end)\nUILib.drawAll()\nwhile true do\n    UILib.clickEvent(UILib.buttonList)\nend'
 );

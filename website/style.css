@@ -88,3 +88,7 @@ body {
     color: #fff;
     font-size: medium;
 }
+
+.white-space {
+    white-space: pre;
+}
