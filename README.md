@@ -1,4 +1,4 @@
-This ComputerCraft project is supposted to be a ipod thing... sort of. **You will need a advanced noisy pocket computer for this for everything to work!!!**
+This ComputerCraft project is supposed to be a ipod thing... sort of. **You will need a advanced noisy pocket computer for this for everything to work!!!**
 
 To install IPodOS (the os name) you need to run this command `wget run https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/installer.lua`
 
