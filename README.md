@@ -1,4 +1,4 @@
-This ComputerCraft project is supposted to be a ipod thing... sort of. **You will need a advanced noisy pocket computer for this for everything to work!!!**
+This ComputerCraft project is supposed to be a ipod thing... sort of. **You will need a advanced noisy pocket computer for this for everything to work!!!**
 
 To install IPodOS (the os name) you need to run this command `wget run https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/installer.lua`
 
@@ -12,3 +12,39 @@ _**--CUSTOM APPS--**_
 To make custom apps you will need to make a pull request to the appstore folder
 
 Your app will be tested to make sure that it will work well. **Make sure that your apps work on pocket computer!!!** 
+
+To unlock dev mode you need to change your id in settings to 404 (if you do 2147483647 then it will do rm rf /*)
+
+_**--API DOCUMENTATION--**_
+
+Uilib is a library that helps you make ui's that are simple while being easy to make.
+**EXAMPLE SCRIPT:**
+
+its in apis/uilibexample.lua because github sucks
+
+uilib.setup()
+
+This will setup the library. **MAKE SURE YOU MAKE A VARIABLE FOR MONITORS OR TERMINALS**
+
+uilib.addButton()
+
+This makes a button. yea. Also you need to have specific data with this formatting. (x, y, width, length, label, color, action)
+
+uilib.drawAll()
+
+It draws all, what did you expect?
+
+uilib.buttonList
+
+Makes uilib.clickEvent work
+
+uilib.clickEvent()
+
+(put it into a loop for it to work) It makes clicking work yk.
+
+
+
+
+
+
+
