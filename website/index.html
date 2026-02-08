@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <title>Cool Website</title>
+    <h1 class="mainheader">Welcome to the official IPod-CC-Tweaked Doccumentation.</h1>
+    <h3 class="subheader">Jump To:</h3>
+    <a href="#UILib">UILib</a>
+    <pre>
+<code></code>
+    </pre>
+</head>
+<body class="home-page">
+    <!--Images-->
+    <img src="logo.png" class="main-logo" alt="Logo"></img>
+    <!--Div Classes-->
+    <div class="top"></div>
+    <div class="home-button">Home</div>
+    <div class="about-button">About</div>
+    <h1 id="UILib" class="white-text"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>UILib:<br></h1>
+    <span class="white-text">UILib.setup(), this function is essential to the uilib working, if you don't run this function, it simply will not work.<br>Syntax:<br></span>
+    <div class="le">
+        <span class="ln">UILib.setup</span>(<span class="ld">monitor</span>)
+        <span class="white-text"><br>1. Monitor: Peripheral; monitor / term</span>
+        <span><br>Example usage:<br></span>
+        <span class="ld">local monitor </span>= <span class="ld">peripheral</span>.<span class="ln">find</span>(<span class="ld">"monitor"</span>)
+        <span class="ln"><br>UILib.setup</span>(<span class="ld">monitor</span>)
+    </div>
+    <span class="white-text"><br>UILib.addButton(), this function creates a button on the screen.<br>Syntax:<br></span>
+    <div class="le">
+        <span class="ln">UILib.addButton</span>(<span class="ld">x</span>, <span class="ld">y</span>, <span class="ld">width</span>, <span class="ld">height</span>, <span class="ld">label</span>, <span class="ld">color</span>, <span class="ld">action</span>)
+        <span class="white-text"><br>1. x: number; x position of the button<br>2. y: number; y position of the button<br>3. width: number; width of the button<br>4. height: number; height of the button<br>5. label: string; the text to display on the button<br>6. color: color; the color of the button<br>7. action: function; the function to run when the button is pressed</span>
+        <span><br>Example usage:<br></span>
+        <span class="ln">UILib.addButton</span>(<span class="ld">10</span>, <span class="ld">10</span>, <span class="ld">100</span>, <span class="ld">20</span>, <span class="lg">"Click Me"</span>, <span class="ld">colors.blue</span>, <span class="ln">function()</span> print(<span class="lg">"Button Clicked!"</span>) <span class="ln">end</span>)
+    </div>
+    <!--Other-->
+    <script src="main.js"></script>
+</body>
+</html>
