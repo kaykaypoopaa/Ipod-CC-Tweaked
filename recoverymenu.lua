@@ -78,6 +78,8 @@ local function EnterApplication()
             term.clear()
             term.setCursorPos(1,1)
             term.write("Opening ")
+            shell.run("rename startup.lua recoverymenu.lua")
+            shell.run("rename startupnormal.lua startup.lua")
             sleep(0.5)
             if option == 1 then
                 print("IPodOS Program")
