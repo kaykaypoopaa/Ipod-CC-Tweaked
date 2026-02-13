@@ -1,3 +1,4 @@
+--this is some real turboshit code but if it works it works -GlitchGod42
 --0. Variables
 local sc = require("/apis/speedycoding")
 local path = "applist.txt"
