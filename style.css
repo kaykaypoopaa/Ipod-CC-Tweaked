@@ -8,7 +8,7 @@
         font-family: 'Courier New', Courier, monospace;
         padding: 15px;
         border-radius: 5px;
-        width: 600px;
+        width: fit-content;
         font-size: 14px;
     }
     .lpt { color: #aaaaaa; } /* Gray > */
