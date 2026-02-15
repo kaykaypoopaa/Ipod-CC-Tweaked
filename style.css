@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+    .le {
+        background-color: #1e1e1e; /* Dark background */
+        color: #f1f1f1; /* Light text */
+        font-family: 'Courier New', Courier, monospace;
+        padding: 15px;
+        border-radius: 5px;
+        width: 600px;
+        font-size: 14px;
+    }
+    .lpt { color: #aaaaaa; } /* Gray > */
+    .ld { color: #569cd6; font-weight: bold; } /* Blue (e.g. if, then) */
+    .ln { color: #dcdcaa; } /* Yellowish-white */
+    .lg { color: #ce9178; } /* Orange/Brown */
+    .lt { color: #b5cea8; } /* Light green/gray for output */
+
+body {
+    background-color: #222;
+
+    background-size: auto;
+}
+
+.top {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #444;
+}
+
+.main-logo {
+    z-index: 1;
+    top: 0px;
+    left: 10px;
+    width: 145px;
+    height: 50px;
+    display: block;
+    margin-left: 10px;
+    margin-top: 0px;
+    position: fixed;
+}
+
+.home-button {
+    z-index: 1;
+    top: 7px;
+    left: 200px;
+    width: 80px;
+    height: 38px;
+    font-size: 32px;
+    display: block;
+    position: fixed;
+}
+.home-button:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+.about-button {
+    z-index: 1;
+    top: 7px;
+    left: 300px;
+    width: 80px;
+    height: 38px;
+    font-size: 32px;
+    display: block;
+    position: fixed;
+}
+
+.about-button:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+body {
+    nav-down: auto;
+    padding-top: 30px;
+}
+
+.mainheader {
+    color: #fff;
+    font-size: larger;
+}
+
+.white-text {
+    color: #fff;
+    font-size: medium;
+}
+
+.white-space {
+    white-space: pre;
+}
