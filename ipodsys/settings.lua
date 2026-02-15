@@ -17,6 +17,7 @@ print("2. Ipod ID: " .. id)
 print("3. Theme: " .. theme)
 if devmode == "true" then
 print("4. Reboot into recovery menu")
+print("5. Start terminal")
 elseif id == "67" then
 print("ur not funny broski")
 sleep(0.5)
@@ -49,4 +50,8 @@ elseif settingtochange == "4" and devmode == "true" then
     print("REBOOTING")
     sleep(1)
     os.reboot()
+elseif settingtochange == "5" and devmode == "true" then
+    print("starting")
+    sleep(0.2)
+    shell.run("terminal.lua")
 end
