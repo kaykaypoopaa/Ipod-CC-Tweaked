@@ -17,4 +17,4 @@ To unlock dev mode you need to change your id in settings to 404 (if you do 2147
 
 _**--API DOCUMENTATION--**_
 
-**all documentation has been moved to 'https://ipod-os-cctweaked.duckdns.org/'!!** (the website is safe dont worry)
+**all documentation has been moved to https://ipod-os-cctweaked.duckdns.org/!!** (the website is safe dont worry)
