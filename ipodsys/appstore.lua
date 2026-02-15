@@ -45,6 +45,7 @@ while true do
     elseif event == "key" and char == keys.enter then
         for _, text in ipairs(data) do
             if text.name:lower() == input:lower() then
+                shell.run("cd ../ipodapps")
                 shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/appstore/" .. text.name)
             end
         end
