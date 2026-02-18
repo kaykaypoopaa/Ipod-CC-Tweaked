@@ -11,7 +11,7 @@ _**--CUSTOM APPS--**_
 
 To make custom apps you will need to make a pull request to the appstore folder
 
-Your app will be tested to make sure that it will work well. **Make sure that your apps work on pocket computer!!!** 
+Your app will be tested to make sure that it will work well. **Make sure that your apps work on pocket computer!!!** Also, you will need to make your app one file or make a version that installs the assets to ipodusr.
 
 To unlock dev mode you need to change your id in settings to 404 (if you do 2147483647 then it will do rm rf /*)
 
