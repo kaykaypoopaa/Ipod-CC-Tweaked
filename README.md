@@ -1,4 +1,4 @@
-This is the nighly build for IPodOS! **This build can be unstable or crash alot!!!**
+This is the nighly/beta build for IPodOS! **This build can be unstable or crash alot!!!**
 
 To install the nightly branch of IPodOS you need to run this command `wget run https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/installer.lua`
 
