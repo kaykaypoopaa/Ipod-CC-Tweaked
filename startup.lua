@@ -14,7 +14,7 @@ local function ListenForTerm()
 end
 
 local localversion = 1.0
-shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/version.txt version.txt")
+shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/nightly/version.txt version.txt")
 local file = fs.open("version.txt", "r")
 local ver = file.readLine()
 if ver ~= localversion then
