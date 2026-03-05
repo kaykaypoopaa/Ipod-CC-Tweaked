@@ -1,6 +1,6 @@
-This ComputerCraft project is supposed to be a ipod thing... sort of. **You will need a advanced noisy pocket computer for this for everything to work!!!**
+This is the nighly build for IPodOS! **This build can be unstable or crash alot!!!**
 
-To install IPodOS (the os name) you need to run this command `wget run https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/installer.lua`
+To install the nightly branch of IPodOS you need to run this command `wget run https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/installer.lua`
 
 We (GlitchGod42 and kaykaypoopaa aka lawnman) will be updating this os to fix **BUGS** and add stuff so if you find bugs then make a issue here ig.
 
@@ -13,7 +13,7 @@ To make custom apps you will need to make a pull request to the appstore folder
 
 Your app will be tested to make sure that it will work well. **Make sure that your apps work on pocket computer!!!** Also, you will need to make your app one file or make a version that installs the assets to ipodusr.
 
-To unlock dev mode you need to change your id in settings to 404 (if you do 2147483647 then it will do rm rf /*)
+The nightly build has dev mode built in!
 
 _**--API DOCUMENTATION--**_
 
