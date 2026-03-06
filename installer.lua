@@ -1,3 +1,4 @@
+print("this is the nightly build!")
 if not pocket then
     print("Please use a pocket computer.")
     return
