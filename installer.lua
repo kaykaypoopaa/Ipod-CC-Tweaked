@@ -1,9 +1,6 @@
 if not pocket then
     print("Please use a pocket computer.")
     return
-elseif not advanced then
-    print("Please use a ADVANCED pocket computer.")
-    return
 end
 print("Making System Dir")
 fs.makeDir("ipodsys")
