@@ -13,15 +13,15 @@ local function ListenForTerm()
   end
 end
 
-local localversion = 1.0
+local localversion = "1.0"
 shell.run("wget https://raw.githubusercontent.com/kaykaypoopaa/Ipod-CC-Tweaked/refs/heads/main/version.txt version.txt")
 local file = fs.open("version.txt", "r")
 local ver = file.readLine()
 if ver ~= localversion then
   print("Do you want to update? (y/n)")
   local updatereq = read()
-elseif updatereq == y then
-  shell.run("updater.lua")
-elseif updatereq == n then
 end
+if updatereq == "y" then
+  shell.run("updater.lua")
+elseif updatereq == "n" then end
 parallel.waitForAny(RunIpod, ListenForTerm)
